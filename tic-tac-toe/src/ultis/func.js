@@ -46,7 +46,7 @@ function getLinesAt(position, moved, lineLength) {
 }
 
 function isLineWin(line, lineLength) {
-    const regex = new RegExp(`(O{${lineLength}}|X{${lineLength}})`);
+    const regex = new RegExp(`(o{${lineLength}}|x{${lineLength}})`);
     const winLineStart = Number(line.line.search(regex));
     if (winLineStart !== -1) {
         return {
