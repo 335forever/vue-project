@@ -1,4 +1,6 @@
 <script setup>
+import o from '../assets/o.png'
+import x from '../assets/o.png'
 const props = defineProps({
     mark: String,
     belongToWinLine: Boolean
@@ -17,7 +19,7 @@ const handleCellClick = () => {
     >
         <img v-if="mark"
             class="cell-img"
-            :src="'/src/assets/mark_' + mark + '.png'"
+            :src="'src/assets/' + mark + '.png'"
             alt="Mark"
             width="40"
             height="40"

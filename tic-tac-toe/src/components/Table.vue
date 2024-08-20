@@ -10,7 +10,7 @@ const props = defineProps({
 })
 
 const defaultMatchStatus = {
-    nextMark: 'x', 
+    nextMark: 'X', 
     moved: [], 
     win : null
 }
@@ -53,7 +53,7 @@ const handleCellClick = (i, j) => {
         },
         mark: matchStatus.nextMark
     });
-    matchStatus.nextMark = matchStatus.nextMark === 'x' ? 'o' : 'x';
+    matchStatus.nextMark = matchStatus.nextMark === 'X' ? 'O' : 'X';
     matchStatus.win = checkWin({x:i,y:j}, matchStatus.moved, props.lineLength);
 }
 
@@ -82,8 +82,8 @@ const handleSettingButton = () => {
 <template>
     <div class="board">
         <div class="left-side">
-            <p v-if="matchStatus.win">Người thắng:<img :src="'/src/assets/mark_' + matchStatus.win.mark + '.png'" alt="Win mark"/></p> 
-            <p v-else-if="matchStatus.moved.length < size.m * size.n">Lượt tiếp theo: <img :src="'/src/assets/mark_' + matchStatus.nextMark + '.png'" alt="Next mark"/></p>
+            <p v-if="matchStatus.win">Người thắng:<img :src="'src/assets/' + matchStatus.win.mark + '.png'" alt="Win mark"/></p> 
+            <p v-else-if="matchStatus.moved.length < size.m * size.n">Lượt tiếp theo: <img :src="'src/assets/' + matchStatus.nextMark + '.png'" alt="Next mark"/></p>
             <p v-else>Hòa</p>
             <div 
                 class="table"
