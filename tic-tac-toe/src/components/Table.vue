@@ -82,7 +82,7 @@ const handleSettingButton = () => {
 <template>
     <div class="board">
         <div class="left-side">
-            <p v-if="matchStatus.win">Người thắng:<img :src="'src/assets/' + matchStatus.win.mark + '.png'" alt="Win mark"/></p> 
+            <p v-if="matchStatus.win">Người thắng:<img :src="'public/' + matchStatus.win.mark + '.png'" alt="Win mark"/></p> 
             <p v-else-if="matchStatus.moved.length < size.m * size.n">Lượt tiếp theo: <img :src="'src/assets/' + matchStatus.nextMark + '.png'" alt="Next mark"/></p>
             <p v-else>Hòa</p>
             <div 

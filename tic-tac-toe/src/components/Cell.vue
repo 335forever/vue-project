@@ -17,7 +17,7 @@ const handleCellClick = () => {
     >
         <img v-if="mark"
             class="cell-img"
-            :src="'/src/assets/'+ mark + '.png'"
+            :src="'/public/'+ mark + '.png'"
             alt="Mark"
             width="40"
             height="40"
